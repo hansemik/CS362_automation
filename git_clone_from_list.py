@@ -12,7 +12,7 @@ args = parser.parse_args()
 userlist = args.file
 
 if args.assignment_num == None:
-   assignment_num = 'default'
+   assignment_num = '0'
 else:
    assignment_num = str(args.assignment_num)
 
@@ -46,7 +46,7 @@ with open(userlist) as f:
 	 clone = subprocess.Popen(["git","clone", url])
 	 time.sleep(1)
 		   
-	 branch_seq = (onid,"-assignment-2")
+	 branch_seq = (onid,"-assignment-",assignment_num)
 	 branch = ''.join(branch_seq).strip()
 	 time.sleep(1)
 	 try:
