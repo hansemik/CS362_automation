@@ -60,7 +60,7 @@ with open(userlist) as f:
 	       time.sleep(1)
 
 	       make_clean = subprocess.Popen(["make","clean",])
-	       make_all = subprocess.Popen(["make","all"])
+	       make_unittestresult = subprocess.Popen(["make","unittestresults.out"])
 	       os.chdir('../../../')
             except:
 	       print('Make failed for %s' % onid)
